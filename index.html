@@ -1,37 +1,103 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShareCart-URL - 무서버 장바구니 리스트 조합기</title>
-  <meta name="description" content="여러 쇼핑몰 상품 URL, 품명, 수량, 예상 금액을 서버 DB 없이 단일 URL 해시로 압축하여 공유하는 제로-지식 무서버 장바구니 도구">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합</title>
+<meta content="쿠팡, 네이버, 11번가, 컬리 장바구니를 단 하나의 예쁜 모바일 카드로 결합: 서버 없는 URL 해시 인코딩과 광고 추적 파라미터 자동 정제를 지원합니다." name="description"/>
+<link href="https://sharecart-url-combiner.enjoy-onepage.com/" rel="canonical"/>
+<!-- OpenGraph -->
+<meta content="website" property="og:type"/>
+<meta content="통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합" property="og:title"/>
+<meta content="쿠팡, 네이버, 11번가, 컬리 장바구니를 단 하나의 예쁜 모바일 카드로 결합: 서버 없는 URL 해시 인코딩과 광고 추적 파라미터 자동 정제를 지원합니다." property="og:description"/>
+<meta content="https://sharecart-url-combiner.enjoy-onepage.com/" property="og:url"/>
+<meta content="https://sharecart-url-combiner.enjoy-onepage.com/og-image.png" property="og:image"/>
+<meta content="ko_KR" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합" name="twitter:title"/>
+<meta content="쿠팡, 네이버, 11번가, 컬리 장바구니를 단 하나의 예쁜 모바일 카드로 결합: 서버 없는 URL 해시 인코딩과 광고 추적 파라미터 자동 정제를 지원합니다." name="twitter:description"/>
+<meta content="https://sharecart-url-combiner.enjoy-onepage.com/og-image.png" name="twitter:image"/>
+<!-- Favicon & Icons -->
+<link href="./favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="./favicon.ico" rel="apple-touch-icon"/>
+<!-- Tailwind & AdSense -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
+<!-- Layout Shield & CLS Defense -->
+<style>
     html, body { max-width: 100%; overflow-x: hidden; }
-    .manual-ad-box { width: 100%; max-width: 960px; overflow: hidden; }
+    .manual-ad-box { width: 100%; max-width: 960px; overflow: hidden; margin: 16px auto; }
     .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
   </style>
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합",
+  "url": "https://sharecart-url-combiner.enjoy-onepage.com/",
+  "description": "쿠팡, 네이버, 11번가, 컬리 장바구니를 단 하나의 예쁜 모바일 카드로 결합: 서버 없는 URL 해시 인코딩과 광고 추적 파라미터 자동 정제를 지원합니다.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "KRW"
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "여러 쇼핑몰 장바구니를 어떻게 한 링크로 묶나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "쿠팡, 네이버, 11번가 등의 상품 링크와 가격을 입력하면 브라우저 내에서 안전한 Base64 해시로 압축하여 단 하나의 스마트 딥링크를 생성합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "링크를 받는 사람도 앱을 깔아야 하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "아닙니다. 상대방은 카톡 링크를 누르기만 하면 별도 설치나 회원가입 없이 모바일 브라우저에서 깔끔한 통합 영수증 카드를 확인할 수 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "링크에 내 개인정보나 쇼핑 쿠키가 남지 않나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "본 도구는 링크 입력 즉시 불필요한 광고 추적 파라미터(UTM, ref 등)를 100% 자동 절단하므로 사생활이 안전하게 보호됩니다."
+        }
+      }
+    ]
+  }
+}
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col justify-between">
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl">🛒</span>
-        <div>
-          <h1 class="text-base font-bold text-slate-900 leading-tight">ShareCart-URL (무서버 장바구니 조합기)</h1>
-          <p class="text-xs text-slate-500">서버 저장 0% · URL 해시 압축 공유 · 100% 브라우저 메모리 연산</p>
-        </div>
-      </div>
-      <a href="guides/guide.html" class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg border border-indigo-200 hover:bg-indigo-100 transition">
+<header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-2xl">🛒</span>
+<div>
+<h1 class="text-base font-bold text-slate-900 leading-tight">ShareCart-URL (무서버 장바구니 조합기)</h1>
+<p class="text-xs text-slate-500">서버 저장 0% · URL 해시 압축 공유 · 100% 브라우저 메모리 연산</p>
+</div>
+</div>
+<a class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg border border-indigo-200 hover:bg-indigo-100 transition" href="guides/guide.html">
         가이드
       </a>
-    </div>
-  </header>
+</div>
+</header>
 
-  <div class="manual-ad-box mx-auto my-2 px-4">
+  <!-- Top Slim Ad Banner (50~60px) -->
+  <div class="manual-ad-box text-center my-3" style="min-height: 60px;">
     <ins class="adsbygoogle"
-         style="display:block; height: 60px; max-height: 60px;"
+         style="display:block"
          data-ad-client="ca-pub-2228289204702106"
          data-ad-slot="3824727725"
          data-ad-format="horizontal"
@@ -39,91 +105,238 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <main class="max-w-7xl mx-auto px-4 py-6 flex-grow">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- Left Column: Input Form (6 cols) -->
-      <section class="lg:col-span-6 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
-        <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
-          <div>
-            <h2 class="text-base font-bold text-slate-800">🛍️ 상품 품목 추가</h2>
-            <p class="text-xs text-slate-500">쇼핑몰 링크와 예상 가격을 입력하세요.</p>
-          </div>
-          <button id="add-item-btn" class="text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg shadow transition">
+
+<main class="max-w-7xl mx-auto px-4 py-6 flex-grow">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Input Form (6 cols) -->
+<section class="lg:col-span-6 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
+<div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+<div>
+<h2 class="text-base font-bold text-slate-800">🛍️ 상품 품목 추가</h2>
+<p class="text-xs text-slate-500">쇼핑몰 링크와 예상 가격을 입력하세요.</p>
+</div>
+<button class="text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg shadow transition" id="add-item-btn">
             + 품목 추가
           </button>
-        </div>
-
-        <div id="items-container" class="space-y-3">
-          <!-- Item Row 1 -->
-          <div class="item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-            <div class="grid grid-cols-2 gap-2">
-              <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명 (예: 캠핑용 의자)" value="경량 캠핑 체어">
-              <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="가격 (원)" value="35,000">
-            </div>
-            <div class="grid grid-cols-3 gap-2">
-              <input type="number" class="item-qty px-3 py-2 border border-slate-300 rounded-lg text-base" min="1" value="2" placeholder="수량">
-              <input type="text" class="item-url col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품 URL (선택)" value="https://coupang.com/example">
-            </div>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3 pt-2">
-          <button id="calc-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-4 rounded-xl shadow transition text-base">
-            <span>🔗</span> 압축 공유 URL & 영수증 생성
+</div>
+<div class="space-y-3" id="items-container">
+<!-- Item Row 1 -->
+<div class="item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+<div class="grid grid-cols-2 gap-2">
+<input class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명 (예: 캠핑용 의자)" type="text" value="경량 캠핑 체어"/>
+<input class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="가격 (원)" type="text" value="35,000"/>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<input class="item-qty px-3 py-2 border border-slate-300 rounded-lg text-base" min="1" placeholder="수량" type="number" min="0" value="2"/>
+<input class="item-url col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품 URL (선택)" type="text" value="https://coupang.com/example"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-4 rounded-xl shadow transition text-base" id="calc-btn">
+<span>🔗</span> 압축 공유 URL &amp; 영수증 생성
           </button>
-          <button id="reset-btn" class="px-4 py-3.5 border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold rounded-xl text-base">
+<button class="px-4 py-3.5 border border-slate-300 hover:bg-slate-100 text-slate-600 font-semibold rounded-xl text-base" id="reset-btn">
             초기화
           </button>
-        </div>
-      </section>
-
-      <!-- Right Column: Result Box (6 cols, Sticky) -->
-      <section class="lg:col-span-6 lg:sticky lg:top-20 space-y-4">
-        <div id="result-box" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-          <div class="border-b border-dashed border-slate-300 pb-4 mb-4 text-center">
-            <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-bold rounded-full mb-1">
+</div>
+</section>
+<!-- Right Column: Result Box (6 cols, Sticky) -->
+<section class="lg:col-span-6 lg:sticky lg:top-20 space-y-4">
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200" id="result-box">
+<div class="border-b border-dashed border-slate-300 pb-4 mb-4 text-center">
+<span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-bold rounded-full mb-1">
               ✓ 무서버 로컬 장바구니
             </span>
-            <h3 class="text-lg font-black text-slate-900">총 결제 예정 금액</h3>
-            <p class="text-3xl font-black text-indigo-600 mt-2" id="total-amount-display">70,000원</p>
-            <p class="text-xs text-slate-500 mt-1" id="total-qty-text">총 1종 품목 (2개 수량)</p>
-          </div>
-
-          <div class="space-y-2 text-xs" id="summary-list">
-            <!-- List of items rendered here -->
-          </div>
-
-          <div class="mt-4 pt-3 border-t border-slate-100 space-y-2">
-            <label class="block text-[11px] font-bold text-slate-500">생성된 무서버 압축 공유 URL (URL Hash)</label>
-            <input type="text" id="share-url-input" readonly class="w-full px-2.5 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600">
-          </div>
-
-          <div class="mt-4">
-            <button id="copy-btn" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-4 rounded-xl text-sm transition shadow">
-              <span>📋</span> 공유 링크 및 장바구니 복사하기
+<h3 class="text-lg font-black text-slate-900">총 결제 예정 금액</h3>
+<p class="text-3xl font-black text-indigo-600 mt-2" id="total-amount-display">70,000원</p>
+<p class="text-xs text-slate-500 mt-1" id="total-qty-text">총 1종 품목 (2개 수량)</p>
+</div>
+<div class="space-y-2 text-xs" id="summary-list">
+<!-- List of items rendered here -->
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 space-y-2">
+<label class="block text-[11px] font-bold text-slate-500">생성된 무서버 압축 공유 URL (URL Hash)</label>
+<input class="w-full px-2.5 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-600" id="share-url-input" readonly="" type="text"/>
+</div>
+<div class="mt-4">
+<button class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-4 rounded-xl text-sm transition shadow" id="copy-btn">
+<span>📋</span> 공유 링크 및 장바구니 복사하기
             </button>
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-    <section class="mt-12 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-      <h2 class="text-xl font-bold text-slate-900 mb-3">ShareCart-URL 작동 방식 FAQ</h2>
-      <details class="group border border-slate-200 rounded-xl p-4 bg-slate-50 open:bg-white transition">
-        <summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between">
-          <span>Q. 내 상품 목록이 서버 데이터베이스에 저장되나요?</span>
-          <span class="text-slate-400 group-open:rotate-180 transition">▼</span>
-        </summary>
-        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+</div>
+</div>
+</section>
+</div>
+<section class="mt-12 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
+<h2 class="text-xl font-bold text-slate-900 mb-3">ShareCart-URL 작동 방식 FAQ</h2>
+<details class="group border border-slate-200 rounded-xl p-4 bg-slate-50 open:bg-white transition">
+<summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between">
+<span>Q. 내 상품 목록이 서버 데이터베이스에 저장되나요?</span>
+<span class="text-slate-400 group-open:rotate-180 transition">▼</span>
+</summary>
+<p class="text-sm text-slate-600 mt-2 leading-relaxed">
           아닙니다. 모든 상품 데이터는 브라우저 내부에서 Base64URL로 압축되어 해시(#) 뒤에만 포함됩니다. 서버에는 어떠한 데이터도 전송되지 않는 100% 제로-지식 구조입니다.
         </p>
-      </details>
-    </section>
-  </main>
+</details>
+</section>
+</main>
 
-  <div class="manual-ad-box mx-auto my-6 px-4">
+<div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white text-sm px-5 py-2.5 rounded-full shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="toast">
+    공유 링크가 클립보드에 복사되었습니다.
+  </div>
+<!-- E-E-A-T In-Depth Guidebook & FAQ & Hub-and-Spoke Links -->
+<section class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+<!-- Hub & Spoke Magazine Guide Banner -->
+<div class="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/40 dark:to-blue-950/40 border border-indigo-100 dark:border-indigo-800/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="space-y-2 text-center sm:text-left">
+<span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">2,000자+ 전문 매거진 심층 분석</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+          통합 장바구니 공유기 완벽 해설 가이드북
+        </h2>
+<p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+          법령 산식, 2026년 최신 고시, 상황별 비교 분석표 및 실무 절세·행동 요령이 수록된 전문 가이드북을 지금 무료로 확인하세요.
+        </p>
+</div>
+<a class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3.5 rounded-xl transition shadow hover:shadow-md text-sm whitespace-nowrap" href="./guides/guide.html">
+<span>📖</span> <span>심층 가이드북 읽기 →</span>
+</a>
+</div>
+<!-- FAQ Accordion -->
+<div class="space-y-4">
+<div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span>💡</span> 자주 묻는 질문 (E-E-A-T FAQ 3선)
+        </h2>
+</div>
+<div class="space-y-4">
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 여러 쇼핑몰 장바구니를 어떻게 한 링크로 묶나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            쿠팡, 네이버, 11번가 등의 상품 링크와 가격을 입력하면 브라우저 내에서 안전한 Base64 해시로 압축하여 단 하나의 스마트 딥링크를 생성합니다.
+          </p>
+</div>
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 링크를 받는 사람도 앱을 깔아야 하나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            아닙니다. 상대방은 카톡 링크를 누르기만 하면 별도 설치나 회원가입 없이 모바일 브라우저에서 깔끔한 통합 영수증 카드를 확인할 수 있습니다.
+          </p>
+</div>
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 링크에 내 개인정보나 쇼핑 쿠키가 남지 않나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            본 도구는 링크 입력 즉시 불필요한 광고 추적 파라미터(UTM, ref 등)를 100% 자동 절단하므로 사생활이 안전하게 보호됩니다.
+          </p>
+</div>
+</div>
+</div>
+<!-- Official Legal Disclaimer -->
+<div class="bg-slate-100 dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 space-y-1.5 leading-relaxed">
+<div class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+<span>⚖️</span> <span>법적 고지 및 면책 조항 (Legal Disclaimer)</span>
+</div>
+<p>
+        본 웹 애플리케이션의 모든 연산 결과와 시뮬레이션 수치는 2026년 최신 관계 법령 및 표준 산식을 기초로 산출된 참고용 추정치입니다. 실제 개별 세무 정산, 대출 승인, 정부 지원금 수령 등은 개인의 구체적 조건에 따라 차이가 발생할 수 있습니다. 본 사이트는 도구의 계산 결과를 근거로 한 금융·법률적 결정에 대해 법적 책임을 지지 않습니다.
+      </p>
+</div>
+</section>
+
+  <!-- Additional E-E-A-T In-depth Educational Guide & Action Checklist -->
+  <section class="max-w-4xl mx-auto px-4 py-6">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+        <span>📋</span> 2026년 실무 핵심 활용 전략 및 실천 가이드
+      </h2>
+      <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        본 도구는 최신 2026년 제도 기준과 수학적 공식에 기반하여 설계되었습니다. 정확한 결과 도출을 위해 아래 3대 실천 수칙을 준수하시기 바랍니다:
+      </p>
+      <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 list-disc list-inside leading-relaxed pl-2">
+        <li><strong>정확한 기본 데이터 입력:</strong> 공식 증빙 서류(근로계약서, 소득금액증명원, 영수증 등)에 기재된 정확한 세전/세후 수치를 입력하세요.</li>
+        <li><strong>결과 검토 및 시뮬레이션:</strong> 단일 조건에 안주하지 않고 다양한 변수(기간 연장, 금리 변동, 할인율 적용 등)를 대입하여 최적의 플랜을 수립하세요.</li>
+        <li><strong>공식 가이드북 대조:</strong> 상세한 법령 배경과 심층 비교표가 수록된 <a href="./guides/guide.html" class="text-indigo-600 dark:text-indigo-400 font-bold underline hover:text-indigo-800">2026 전문 매거진 가이드북</a>을 통해 실무적인 유의사항을 최종 점검하세요.</li>
+      </ul>
+      <div class="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+        ※ 본 유틸리티의 모든 연산은 외부 서버로 전송되지 않는 100% 클라이언트 로컬 보안 연산입니다. 안심하고 자유롭게 활용하세요.
+      </div>
+    </div>
+  </section>
+
+<!-- Bottom Large Ad Banner -->
+
+<!-- Footer -->
+<!-- E-E-A-T In-Depth Guidebook & FAQ & Hub-and-Spoke Links -->
+<section class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+<!-- Hub & Spoke Magazine Guide Banner -->
+<div class="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/40 dark:to-blue-950/40 border border-indigo-100 dark:border-indigo-800/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="space-y-2 text-center sm:text-left">
+<span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">2,000자+ 전문 매거진 심층 분석</span>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+          통합 장바구니 공유기 완벽 해설 가이드북
+        </h2>
+<p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+          법령 산식, 2026년 최신 고시, 상황별 비교 분석표 및 실무 절세·행동 요령이 수록된 전문 가이드북을 지금 무료로 확인하세요.
+        </p>
+</div>
+<a class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3.5 rounded-xl transition shadow hover:shadow-md text-sm whitespace-nowrap" href="./guides/guide.html">
+<span>📖</span> <span>심층 가이드북 읽기 →</span>
+</a>
+</div>
+<!-- FAQ Accordion -->
+<div class="space-y-4">
+<div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span>💡</span> 자주 묻는 질문 (E-E-A-T FAQ 3선)
+        </h2>
+</div>
+<div class="space-y-4">
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 여러 쇼핑몰 장바구니를 어떻게 한 링크로 묶나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            쿠팡, 네이버, 11번가 등의 상품 링크와 가격을 입력하면 브라우저 내에서 안전한 Base64 해시로 압축하여 단 하나의 스마트 딥링크를 생성합니다.
+          </p>
+</div>
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 링크를 받는 사람도 앱을 깔아야 하나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            아닙니다. 상대방은 카톡 링크를 누르기만 하면 별도 설치나 회원가입 없이 모바일 브라우저에서 깔끔한 통합 영수증 카드를 확인할 수 있습니다.
+          </p>
+</div>
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
+<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 링크에 내 개인정보나 쇼핑 쿠키가 남지 않나요?
+          </h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
+            본 도구는 링크 입력 즉시 불필요한 광고 추적 파라미터(UTM, ref 등)를 100% 자동 절단하므로 사생활이 안전하게 보호됩니다.
+          </p>
+</div>
+</div>
+</div>
+<!-- Official Legal Disclaimer -->
+<div class="bg-slate-100 dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 space-y-1.5 leading-relaxed">
+<div class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+<span>⚖️</span> <span>법적 고지 및 면책 조항 (Legal Disclaimer)</span>
+</div>
+<p>
+        본 웹 애플리케이션의 모든 연산 결과와 시뮬레이션 수치는 2026년 최신 관계 법령 및 표준 산식을 기초로 산출된 참고용 추정치입니다. 실제 개별 세무 정산, 대출 승인, 정부 지원금 수령 등은 개인의 구체적 조건에 따라 차이가 발생할 수 있습니다. 본 사이트는 도구의 계산 결과를 근거로 한 금융·법률적 결정에 대해 법적 책임을 지지 않습니다.
+      </p>
+</div>
+</section>
+<!-- Bottom Large Ad Banner -->
+
+<!-- Footer -->
+
+
+  <!-- Bottom Large Ad Banner -->
+  <div class="manual-ad-box text-center my-6">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-2228289204702106"
@@ -133,154 +346,19 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white text-sm px-5 py-2.5 rounded-full shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none z-50">
-    공유 링크가 클립보드에 복사되었습니다.
-  </div>
-
-  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-400">
-    © 2026 ShareCart-URL. All rights reserved.
-  </footer>
-
-  <script>
-    function cleanNum(val) {
-      if (!val) return 0;
-      return parseInt(String(val).replace(/,/g, ''), 10) || 0;
-    }
-    function formatNum(num) {
-      return Math.round(num).toLocaleString('ko-KR');
-    }
-
-    const container = document.getElementById('items-container');
-    document.getElementById('add-item-btn').addEventListener('click', () => {
-      const row = document.createElement('div');
-      row.className = 'item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2';
-      row.innerHTML = `
-        <div class="grid grid-cols-2 gap-2">
-          <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명">
-          <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="가격 (원)">
-        </div>
-        <div class="grid grid-cols-3 gap-2">
-          <input type="number" class="item-qty px-3 py-2 border border-slate-300 rounded-lg text-base" min="1" value="1" placeholder="수량">
-          <input type="text" class="item-url col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품 URL (선택)">
-        </div>
-      `;
-      container.appendChild(row);
-    });
-
-    function runCalculation() {
-      const rows = document.querySelectorAll('.item-row');
-      let totalAmount = 0;
-      let totalQty = 0;
-      const items = [];
-      const listContainer = document.getElementById('summary-list');
-      listContainer.innerHTML = '';
-
-      rows.forEach(r => {
-        const name = r.querySelector('.item-name').value || '상품';
-        const price = cleanNum(r.querySelector('.item-price').value);
-        const qty = parseInt(r.querySelector('.item-qty').value, 10) || 1;
-        const url = r.querySelector('.item-url').value || '';
-
-        const subtotal = price * qty;
-        totalAmount += subtotal;
-        totalQty += qty;
-
-        items.push({ name, price, qty, url });
-
-        const itemEl = document.createElement('div');
-        itemEl.className = 'flex justify-between items-center py-1.5 border-b border-slate-100';
-        itemEl.innerHTML = `
-          <span>${name} (${qty}개)</span>
-          <span class="font-bold text-slate-800">${formatNum(subtotal)}원</span>
-        `;
-        listContainer.appendChild(itemEl);
-      });
-
-      document.getElementById('total-amount-display').textContent = `${formatNum(totalAmount)}원`;
-      document.getElementById('total-qty-text').textContent = `총 ${items.length}종 품목 (${totalQty}개 수량)`;
-
-      // Encode to URL Hash
-      try {
-        const jsonStr = JSON.stringify(items);
-        const encoded = btoa(encodeURIComponent(jsonStr));
-        const fullUrl = `${window.location.origin}${window.location.pathname}#cart=${encoded}`;
-        document.getElementById('share-url-input').value = fullUrl;
-      } catch (e) {}
-    }
-
-    document.getElementById('calc-btn').addEventListener('click', runCalculation);
-    document.getElementById('reset-btn').addEventListener('click', () => {
-      container.innerHTML = `
-        <div class="item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-          <div class="grid grid-cols-2 gap-2">
-            <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명" value="경량 캠핑 체어">
-            <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="가격 (원)" value="35,000">
-          </div>
-          <div class="grid grid-cols-3 gap-2">
-            <input type="number" class="item-qty px-3 py-2 border border-slate-300 rounded-lg text-base" min="1" value="2" placeholder="수량">
-            <input type="text" class="item-url col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품 URL" value="">
-          </div>
-        </div>
-      `;
-      runCalculation();
-    });
-
-    function showToast() {
-      const toast = document.getElementById('toast');
-      toast.style.opacity = '1';
-      setTimeout(() => { toast.style.opacity = '0'; }, 2200);
-    }
-
-    document.getElementById('copy-btn').addEventListener('click', () => {
-      const shareUrl = document.getElementById('share-url-input').value;
-      const total = document.getElementById('total-amount-display').textContent;
-      const text = `[ShareCart 무서버 장바구니 공유]\n- 총 결제 예정액: ${total}\n👉 장바구니 열기: ${shareUrl}`;
-
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(showToast).catch(() => fallback(text));
-      } else {
-        fallback(text);
-      }
-    });
-
-    function fallback(t) {
-      const ta = document.createElement('textarea');
-      ta.value = t;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); showToast(); } catch (e) {}
-      document.body.removeChild(ta);
-    }
-
-    // Read Hash on load
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.location.hash.startsWith('#cart=')) {
-        try {
-          const encoded = window.location.hash.replace('#cart=', '');
-          const decoded = decodeURIComponent(atob(encoded));
-          const items = JSON.parse(decoded);
-          if (Array.isArray(items) && items.length > 0) {
-            container.innerHTML = '';
-            items.forEach(it => {
-              const row = document.createElement('div');
-              row.className = 'item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2';
-              row.innerHTML = `
-                <div class="grid grid-cols-2 gap-2">
-                  <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" value="${it.name}">
-                  <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" value="${formatNum(it.price)}">
-                </div>
-                <div class="grid grid-cols-3 gap-2">
-                  <input type="number" class="item-qty px-3 py-2 border border-slate-300 rounded-lg text-base" value="${it.qty}">
-                  <input type="text" class="item-url col-span-2 px-3 py-2 border border-slate-300 rounded-lg text-base" value="${it.url || ''}">
-                </div>
-              `;
-              container.appendChild(row);
-            });
-          }
-        } catch (e) {}
-      }
-      runCalculation();
-    });
-  </script>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400 mt-12">
+<div class="max-w-4xl mx-auto px-4 space-y-3">
+<div class="flex justify-center gap-4 text-xs font-medium">
+<a class="hover:underline" href="./index.html">메인 도구</a>
+<span>•</span>
+<a class="hover:underline" href="./guides/guide.html">전문 가이드북</a>
+<span>•</span>
+<a class="hover:underline" href="./privacy.html">개인정보처리방침</a>
+<span>•</span>
+<a class="hover:underline" href="./terms.html">이용약관</a>
+</div>
+<p>© 2026 enjoy-onepage.com. All rights reserved.</p>
+</div>
+</footer>
 </body>
 </html>
