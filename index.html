@@ -400,7 +400,7 @@
     document.getElementById('add-item-btn').addEventListener('click', () => {
       const row = document.createElement('div');
       row.className = 'item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2';
-      row.innerHTML = `
+      row.innerHTML=`
         <div class="grid grid-cols-2 gap-2">
           <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명">
           <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="가격 (원)">
@@ -419,7 +419,7 @@
       let totalQty = 0;
       const items = [];
       const listContainer = document.getElementById('summary-list');
-      listContainer.innerHTML = '';
+      listContainer.textContent = '';
 
       rows.forEach(r => {
         const name = r.querySelector('.item-name').value || '상품';
@@ -435,7 +435,7 @@
 
         const itemEl = document.createElement('div');
         itemEl.className = 'flex justify-between items-center py-1.5 border-b border-slate-100';
-        itemEl.innerHTML = `
+        itemEl.innerHTML=`
           <span>${name} (${qty}개)</span>
           <span class="font-bold text-slate-800">${formatNum(subtotal)}원</span>
         `;
@@ -450,13 +450,13 @@
         const jsonStr = JSON.stringify(items);
         const encoded = btoa(encodeURIComponent(jsonStr));
         const fullUrl = `${window.location.origin}${window.location.pathname}#cart=${encoded}`;
-        document.getElementById('share-url-input').value = fullUrl;
+        { const _el = document.getElementById('share-url-input'); if (_el) _el.value = fullUrl; }
       } catch (e) {}
     }
 
     document.getElementById('calc-btn').addEventListener('click', runCalculation);
     document.getElementById('reset-btn').addEventListener('click', () => {
-      container.innerHTML = `
+      container.innerHTML=`
         <div class="item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
           <div class="grid grid-cols-2 gap-2">
             <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" placeholder="상품명" value="경량 캠핑 체어">
@@ -478,7 +478,7 @@
     }
 
     document.getElementById('copy-btn').addEventListener('click', () => {
-      const shareUrl = document.getElementById('share-url-input').value;
+      const shareUrl = document.getElementById('share-url-input')?.value;
       const total = document.getElementById('total-amount-display').textContent;
       const text = `[ShareCart 무서버 장바구니 공유]\n- 총 결제 예정액: ${total}\n👉 장바구니 열기: ${shareUrl}`;
 
@@ -506,11 +506,11 @@
           const decoded = decodeURIComponent(atob(encoded));
           const items = JSON.parse(decoded);
           if (Array.isArray(items) && items.length > 0) {
-            container.innerHTML = '';
+            container.textContent = '';
             items.forEach(it => {
               const row = document.createElement('div');
               row.className = 'item-row p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2';
-              row.innerHTML = `
+              row.innerHTML=`
                 <div class="grid grid-cols-2 gap-2">
                   <input type="text" class="item-name px-3 py-2 border border-slate-300 rounded-lg text-base" value="${it.name}">
                   <input type="text" class="item-price px-3 py-2 border border-slate-300 rounded-lg text-base" value="${formatNum(it.price)}">
