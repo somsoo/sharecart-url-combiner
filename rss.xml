@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합</title>
+  <link>https://sharecart-url-combiner.enjoy-onepage.com/</link>
+  <description>쿠팡, 네이버, 11번가, 컬리 장바구니를 단 하나의 예쁜 모바일 카드로 결합: 서버 없는 URL 해시 인코딩과 광고 추적 파라미터 자동 정제를 지원합니다.</description>
+  <language>ko-kr</language>
+  <atom:link href="https://sharecart-url-combiner.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Tue, 29 Sep 2026 06:01:10 +0000</lastBuildDate>
+  <item>
+    <title>이용약관 - 통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합</title>
+    <link>https://sharecart-url-combiner.enjoy-onepage.com/terms.html</link>
+    <guid isPermaLink="true">https://sharecart-url-combiner.enjoy-onepage.com/terms.html</guid>
+    <description>통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합의 서비스 이용약관입니다. 면책 조항 및 서비스 이용 기준을 안내합니다.</description>
+    <pubDate>Mon, 21 Sep 2026 23:09:26 +0900</pubDate>
+  </item>
+  <item>
+    <title>개인정보처리방침 - 통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합</title>
+    <link>https://sharecart-url-combiner.enjoy-onepage.com/privacy.html</link>
+    <guid isPermaLink="true">https://sharecart-url-combiner.enjoy-onepage.com/privacy.html</guid>
+    <description>통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합의 개인정보처리방침입니다. 본 도구는 사용자 데이터를 서버로 전송하지 않습니다.</description>
+    <pubDate>Mon, 21 Sep 2026 23:09:26 +0900</pubDate>
+  </item>
+  <item>
+    <title>다중 쇼핑몰 장바구니 통합 링크 생성과 공동구매 스마트 공유 가이드</title>
+    <link>https://sharecart-url-combiner.enjoy-onepage.com/guides/guide.html</link>
+    <guid isPermaLink="true">https://sharecart-url-combiner.enjoy-onepage.com/guides/guide.html</guid>
+    <description>쿠팡, 네이버쇼핑, 11번가, 컬리 등 파편화된 다중 쇼핑몰 상품 URL을 단 하나의 모바일 통합 장바구니 카드로 묶어 공유하는 원리와 프라이버시 보호법을 안내합니다.</description>
+    <pubDate>Mon, 21 Sep 2026 22:50:07 +0900</pubDate>
+  </item>
+</channel>
+</rss>
