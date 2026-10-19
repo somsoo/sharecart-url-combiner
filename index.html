@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>통합 장바구니 공유기: 다중 쇼핑몰 단일 링크 결합</title>
+<title>통합 장바구니 공유기 | 다중 쇼핑몰 링크 결합</title>
 <meta content="쿠팡·네이버·11번가·컬리 장바구니 링크를 하나의 모바일 카드로 묶고 추적 파라미터를 자동으로 정리합니다." name="description"/>
 <link href="https://sharecart-url-combiner.enjoy-onepage.com/" rel="canonical"/>
 <!-- OpenGraph -->
@@ -400,6 +400,9 @@
 </footer>
 
   <script>
+    function escHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+    }
     function cleanNum(val) {
       if (!val) return 0;
       return parseInt(String(val).replace(/,/g, ''), 10) || 0;
@@ -435,8 +438,8 @@
 
       rows.forEach(r => {
         const name = r.querySelector('.item-name').value || '상품';
-        const price = cleanNum(r.querySelector('.item-price').value);
-        const qty = parseInt(r.querySelector('.item-qty').value, 10) || 1;
+        const price = Math.max(0, cleanNum(r.querySelector('.item-price').value));
+        const qty = Math.max(1, parseInt(r.querySelector('.item-qty').value, 10) || 1);
         const url = r.querySelector('.item-url').value || '';
 
         const subtotal = price * qty;
@@ -448,7 +451,7 @@
         const itemEl = document.createElement('div');
         itemEl.className = 'flex justify-between items-center py-1.5 border-b border-slate-100';
         itemEl.innerHTML=`
-          <span>${name} (${qty}개)</span>
+          <span>${escHtml(name)} (${qty}개)</span>
           <span class="font-bold text-slate-800">${formatNum(subtotal)}원</span>
         `;
         listContainer.appendChild(itemEl);
